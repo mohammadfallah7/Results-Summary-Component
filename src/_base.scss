@@ -1,0 +1,37 @@
+// Colors
+$light-red: #ff5757;
+$orangey-yellow: #ffb01f;
+$green-teal: #00bd91;
+$cobalt-blue: #1125d4;
+$white: #ffffff;
+$pale-blue: #ebf1ff;
+$light-lavender: #c8c7ff;
+$dark-gray-blue: #303b5a;
+
+// Gradients
+$light-slate-blue: #7857ff;
+$light-royal-blue: #2e2be9;
+$violet-blue: #4e21ca;
+$persian-blue: #2421ca00;
+
+// Font Family
+$hanken-grotesk: "Hanken Grotesk";
+
+// Font Face
+@font-face {
+  font-family: $hanken-grotesk;
+  src: url(../assets/fonts/static/HankenGrotesk-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $hanken-grotesk;
+  src: url(../assets/fonts/static/HankenGrotesk-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: $hanken-grotesk;
+  src: url(../assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+  font-weight: 700;
+}
