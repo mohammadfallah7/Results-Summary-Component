@@ -1,3 +1,191 @@
+@use "base";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: base.$hanken-grotesk;
+  font-weight: 500;
+}
+
+body {
+  min-height: 100vh;
+  @include base.sm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#application {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: base.$screen-sm;
+
+  @include base.sm {
+    flex-direction: row;
+    border-radius: 1.5rem;
+    margin: 0 2rem;
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-image: linear-gradient(
+    to bottom,
+    base.$light-slate-blue,
+    base.$light-royal-blue
+  );
+  padding: 1rem 0;
+  border-radius: 0 0 1.5rem 1.5rem;
+
+  @include base.sm {
+    border-radius: 1.5rem;
+    width: 50%;
+  }
+
+  h3 {
+    color: base.$light-lavender;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  &__score {
+    background-image: linear-gradient(
+      to bottom,
+      base.$violet-blue,
+      base.$persian-blue
+    );
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--large {
+      color: base.$white;
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    &--small {
+      color: base.$light-lavender;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+
+    &__title {
+      color: base.$white;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    &__description {
+      font-size: 0.875;
+      color: base.$light-lavender;
+      text-align: center;
+      max-width: 70%;
+    }
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+
+  @include base.sm {
+    width: 50%;
+  }
+
+  h3 {
+    color: base.$dark-gray-blue;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  &__items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__item {
+    padding: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+
+    &__info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &__score {
+      &--large {
+        color: base.$dark-gray-blue;
+      }
+
+      &--small {
+        color: base.$light-lavender;
+      }
+    }
+  }
+
+  &__item__Reaction {
+    color: base.$light-red;
+    background-color: lighten($color: base.$light-red, $amount: 30%);
+  }
+
+  &__item__Memory {
+    color: base.$orangey-yellow;
+    background-color: lighten($color: base.$orangey-yellow, $amount: 40%);
+  }
+
+  &__item__Verbal {
+    color: base.$green-teal;
+    background-color: lighten($color: base.$green-teal, $amount: 58%);
+  }
+
+  &__item__Visual {
+    color: base.$cobalt-blue;
+    background-color: lighten($color: base.$cobalt-blue, $amount: 50%);
+  }
+
+  &__btn {
+    background-color: base.$dark-gray-blue;
+    width: 100%;
+    padding: 0.75rem 0;
+    border-radius: 2rem;
+    color: base.$pale-blue;
+    font-weight: 700;
+    transition: background ease 0.4s;
+
+    &:hover {
+      background-image: linear-gradient(
+        to bottom,
+        base.$light-slate-blue,
+        base.$light-royal-blue
+      );
+    }
+  }
+}

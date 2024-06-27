@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+
+  src: url(../assets/fonts/static/HankenGrotesk-Medium.ttf);
+
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+
+  src: url(../assets/fonts/static/HankenGrotesk-Bold.ttf);
+
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+
+  src: url(../assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+
+  font-weight: 800;
+}
+
 /*
 ! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
@@ -552,6 +576,227 @@ video {
   --tw-contain-layout:  ;
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+* {
+  font-family: "Hanken Grotesk";
+  font-weight: 500;
+}
+
+body {
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#application {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 640px;
+}
+
+@media screen and (min-width: 640px) {
+  #application {
+    flex-direction: row;
+    border-radius: 1.5rem;
+    margin: 0 2rem;
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-image: linear-gradient(to bottom, #7857ff, #2e2be9);
+  padding: 1rem 0;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+@media screen and (min-width: 640px) {
+  .result {
+    border-radius: 1.5rem;
+    width: 50%;
+  }
+}
+
+.result h3 {
+  color: #c8c7ff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.result__score {
+  background-image: linear-gradient(to bottom, #4e21ca, rgba(36, 33, 202, 0));
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result__score--large {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.result__score--small {
+  color: #c8c7ff;
+}
+
+.result__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.result__info__title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.result__info__description {
+  font-size: 0.875;
+  color: #c8c7ff;
+  text-align: center;
+  max-width: 70%;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .summary {
+    width: 50%;
+  }
+}
+
+.summary h3 {
+  color: #303b5a;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.summary__items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summary__item {
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.summary__item__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summary__item__score--large {
+  color: #303b5a;
+}
+
+.summary__item__score--small {
+  color: #c8c7ff;
+}
+
+.summary__item__Reaction {
+  color: #ff5757;
+  background-color: #fff0f0;
+}
+
+.summary__item__Memory {
+  color: #ffb01f;
+  background-color: #fff8eb;
+}
+
+.summary__item__Verbal {
+  color: #00bd91;
+  background-color: #e6fff9;
+}
+
+.summary__item__Visual {
+  color: #1125d4;
+  background-color: #e7e9fd;
+}
+
+.summary__btn {
+  background-color: #303b5a;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-radius: 2rem;
+  color: #ebf1ff;
+  font-weight: 700;
+  transition: background ease 0.4s;
+}
+
+.summary__btn:hover {
+  background-image: linear-gradient(to bottom, #7857ff, #2e2be9);
 }
 
 /*# sourceMappingURL=style.css.map */

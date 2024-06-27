@@ -14,6 +14,25 @@ $light-royal-blue: #2e2be9;
 $violet-blue: #4e21ca;
 $persian-blue: #2421ca00;
 
+// Break Points
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1280px;
+
+// Media Query
+@mixin sm {
+  @media screen and (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: $screen-md) {
+    @content;
+  }
+}
+
 // Font Family
 $hanken-grotesk: "Hanken Grotesk";
 
@@ -33,5 +52,5 @@ $hanken-grotesk: "Hanken Grotesk";
 @font-face {
   font-family: $hanken-grotesk;
   src: url(../assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
-  font-weight: 700;
+  font-weight: 800;
 }
